@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: none;
+}
+
+
+body{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#main_wrapper{
+    border: 1px solid #fff;
+    width: 500px;
+    padding: 20px;
+}
+
+header, footer{
+    background-color: #fff;
+    padding: 10px;
+    color: darkblue;
+}
+
+main{
+    padding: 20px;
+}
+
+input{
+    margin-bottom: 2px;
+    display: block;
+    font-size: 1em;
+}

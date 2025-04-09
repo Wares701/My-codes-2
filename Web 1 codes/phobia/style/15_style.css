@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/*CSS Reset
+    - Reset Margins
+    - Reset Padding
+    - Reset how dimensions are calculated
+*/
+
+:root{
+    --BG-COLOR: #FFF5E1;
+    --HEADER-COLOR: #B4C8A8;
+    --BLACK: #000;
+    --NAV-COLOR: #6F4F28;
+    --MAIN-COLOR:#c999cf ;
+    --CONTENT-COLOR: #cf9cd6;
+    --BOX-SHADOW: 2px 2px 2px #00000070;
+    --CONTENT-COLOR: ;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#body
+{
+    background-color:  var(--BG-COLOR);
+    margin: 5px;
+    font-family: "Scada", sans-serif;
+}
+
+#mainWrapper
+{
+    background-color: var(--MAIN-COLOR);
+    width: 60rem;
+    margin: auto;
+    min-height: 400px;
+}
+
+#header
+{
+    background-color: var(--HEADER-COLOR);
+    min-height: 100px;
+    margin: 5px;
+    padding: 2rem;
+}
+h1{
+    background-color: #a4b699;
+    box-shadow: var(--BOX-SHADOW);
+    width: 40rem;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+#nav
+{
+    background-color: var(--NAV-COLOR);
+    min-height: 25px;
+    margin: 5px;
+    padding: 1rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+

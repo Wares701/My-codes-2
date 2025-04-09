@@ -1,0 +1,248 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600&display=swap');
+
+/* CSS Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Crimson Text', Georgia, Times, serif;
+    line-height: 1.4em;
+    background: #391f15 url('/dark-wood.jpg');
+    color: #666666;
+}
+
+/* Main Wrapper */
+.mainWrapper {
+    width: 1140px;
+    margin: 20px auto;
+    background-color: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.mainWrapper:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+    height: 160px;
+    background: url('/header.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    padding: 40px 20px;
+    font-family: Georgia, Times, serif;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    transform: translateY(5px);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+header h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    transform: translateY(5px);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+header:hover h1,
+header:hover h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Navigation */
+nav {
+    background-color: #aeaca8;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+    display: block;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 70%;
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.articles-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+article {
+    width: 100%;
+}
+
+article + article {
+    margin-top: 40px;
+}
+
+article figure {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+article figure:hover {
+    transform: scale(1.02);
+}
+
+article figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+article figcaption {
+    font-size: 90%;
+    text-align: left;
+    margin: 5px 0;
+    color: #666666;
+    transition: color 0.3s ease;
+}
+
+article figure:hover figcaption {
+    color: #de6581;
+}
+
+article h2 {
+    color: #de6581;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-weight: 600;
+}
+
+article h2:hover {
+    color: #985d6a;
+}
+
+article h3 {
+    margin-bottom: 10px;
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-weight: 400;
+}
+
+article p {
+    margin-bottom: 20px;
+}
+
+/* Aside */
+aside {
+    width: 35%;
+    padding-left: 40px;
+    border-left: 1px solid #eeeeee;
+}
+
+aside section {
+    margin-bottom: 40px;
+}
+
+aside section:last-child {
+    margin-bottom: 0;
+}
+
+aside h2 {
+    color: #de6581;
+    margin-bottom: 10px;
+    font-family: 'Noto Serif JP', Georgia, serif;
+    font-weight: 600;
+}
+
+aside a {
+    display: block;
+    color: #666666;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: all 0.2s ease;
+    padding-left: 0;
+    font-family: 'Crimson Text', Georgia, serif;
+}
+
+aside a:hover {
+    color: #985d6a;
+    padding-left: 5px;
+}
+
+/* Map */
+iframe {
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+iframe:hover {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #aeaca8;
+    color: white;
+    padding: 20px;
+    font-size: 80%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #999795;
+}

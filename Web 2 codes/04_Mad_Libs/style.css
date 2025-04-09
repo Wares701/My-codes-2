@@ -1,0 +1,29 @@
+html{
+    background-color: skyblue;
+}
+
+header{
+    background-color: #fff;
+    padding: 1px;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+button{
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    background-color: rgb(204, 241, 255);
+}

@@ -1,0 +1,34 @@
+
+h1{
+    color: white;
+}
+
+body{
+    background-color: darkolivegreen
+}
+
+.unit{
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 10rem;
+    margin-top: 0.5rem;
+}
+
+input{
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 10rem;
+    margin-top: 0.5rem;
+    
+}
+
+select{
+    background-color: #f0f0f0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 5.5rem;
+    margin-top: 0.5rem;
+}

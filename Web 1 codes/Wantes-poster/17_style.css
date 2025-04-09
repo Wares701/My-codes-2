@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Ewert&display=swap');
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainWrapper
+{
+  width: 1200px;
+  padding: 20px;
+  border: 1px solid black;
+}
+header, footer
+{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-image: url("17_wood.jpg");
+  background-color: #cccccc;
+  padding: 20px;
+}
+
+.poster{
+  width: 480px;
+  height: 620px;
+  background-image: url("17_parchment.jpg");
+  text-align: center;
+  margin: auto;
+}
+
+.shadow {
+  color: #291200;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+img{
+  width: 300px;
+  height: 325px;
+  border: 2px solid #291200;
+  margin: 10px;
+  filter: sepia(50%);
+}
+
+.header{
+  font-family: "Ewert", serif;
+  font-weight: 100;
+  font-size: 3.5rem;
+  letter-spacing: 10px;
+  text-shadow: none;
+}
+
+.h2{
+  font-family: "DM Serif Text", serif;
+  font-size: 2rem;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+}
+
+.p-1{
+  font-size: 2rem;
+  word-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+.p-2{
+  word-spacing: 3px;
+  font-style: italic;
+}
+.p-3{
+  font-size: 1.5rem;
+}
+
+.p-4{
+  font-size: 2rem;
+  text-decoration: underline;
+}

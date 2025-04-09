@@ -1,0 +1,26 @@
+Input/output notes
+
+* All element that will be referenced by JS need to have an id or other ways to select them.
+* Contains place holder rather than labels
+* Script should be after body
+
+let name_input = document.getElementById("name");
+let age_input = document.getElementById("age");
+let btn = document.getElementById("btn");
+let output = document.getElementById("output");
+
+//Get all ids from html and giving them values
+
+name_input.value
+
+//Get stuff out
+
+output.innerHTML
+
+//Put stuff in 
+
+btn.addEventListener
+
+//when you do something to it like click, event happense
+
+

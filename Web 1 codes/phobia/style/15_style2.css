@@ -1,0 +1,101 @@
+:root{
+    --BG-COLOR: #FFF5E1;
+    --HEADER-COLOR: #B4C8A8;
+    --BLACK: #000;
+    --NAV-COLOR: #6F4F28;
+    --MAIN-COLOR:#c999cf ;
+    --CONTENT-COLOR: #cf9cd6;
+    --BOX-SHADOW: 2px 2px 2px #00000070;
+    --CONTENT-COLOR: ;
+}
+.span{
+    display: inline-block;
+}
+
+#info{
+    background-color: #d79be0; 
+    border: none;
+    color: #000;
+    box-shadow: var(--BOX-SHADOW);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px 10px;
+    cursor: pointer;
+}
+#info:active, #info:visited, #info:hover{
+   background-color: #d79be049; 
+}
+#aside{
+    background-color:#cf9cd6;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: var(--BOX-SHADOW);
+}
+
+.info{
+    background-color: var(--NAV-COLOR);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: var(--BOX-SHADOW);
+}
+
+#drop{
+    background-color:#805623;
+    border: none;
+    color: #ffffff;
+    box-shadow: var(--BOX-SHADOW);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px 10px;
+    cursor: pointer;
+    font-family: "Open Sans", serif;
+}
+
+#drop:active, #drop:visited, #drop:hover{
+    background-color: #d79be049; 
+ }
+main
+{
+    background-color: var(--MAIN-COLOR);
+    min-height: 400px;
+    margin: 5px;
+}
+
+footer
+{
+    background-color: violet;
+    min-height: 25px;
+    margin: 5px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px;
+}
+
+figure{
+    margin: 10px;
+}
+
+
+h2{
+    padding-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+figcaption{
+    padding-bottom: 16px;
+}

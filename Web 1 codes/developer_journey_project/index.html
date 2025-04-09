@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="https://img.icons8.com/fluency/96/code.png" alt="Developer Journey Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="journey.html">My Journey</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to My Developer Journey</h1>
+        
+        <section class="intro">
+            <p>Hello! I'm passionate about becoming a <span class="highlight">web developer</span>. My journey in web development started with learning <abbr title="HyperText Markup Language">HTML</abbr>, and now I'm exploring the world of <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>.</p>
+            
+            <p>I love how web development lets me create things that people can actually use and see online.<br>
+            Join me as I share my journey of learning web development in high school!</p>
+            
+            <p>As they say: "Every expert was once a beginner." I'm excited to keep learning and growing my skills!</p>
+        </section>
+
+        <hr>
+
+        <section class="skills">
+            <h2>My Growing Skill Set</h2>
+            <table class="data-table">
+                <tr>
+                    <th></th>
+                    <th scope="col">Skill Level</th>
+                    <th scope="col">Learning Time</th>
+                    <th scope="col">Projects</th>
+                </tr>
+                <tr>
+                    <th scope="row">HTML</th>
+                    <td>Intermediate</td>
+                    <td>6 months</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">CSS</th>
+                    <td>Learning</td>
+                    <td>3 months</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">PHP</th>
+                    <td>Beginner</td>
+                    <td>1 month</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="contact-form">
+            <h2>Let's Connect!</h2>
+            <p>Feel free to reach out through this form or send me an <abbr title="Electronic Mail">email</abbr>. I'm always excited to connect with fellow web developers!</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Experience Level:</label>
+                    <input type="radio" id="beginner" name="level" value="beginner">
+                    <label for="beginner">Beginner</label>
+                    <input type="radio" id="intermediate" name="level" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                    <input type="radio" id="advanced" name="level" value="advanced">
+                    <label for="advanced">Advanced</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Interested In:</label>
+                    <input type="checkbox" id="frontend" name="interest" value="frontend">
+                    <label for="frontend">Frontend</label>
+                    <input type="checkbox" id="backend" name="interest" value="backend">
+                    <label for="backend">Backend</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialty">Specialty:</label>
+                    <select id="specialty" name="specialty">
+                        <option value="">Select a specialty</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile Development</option>
+                        <option value="ai">AI/ML</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Connect</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Developer Journey. All rights reserved.</p>
+    </footer>
+</body>
+</html>
