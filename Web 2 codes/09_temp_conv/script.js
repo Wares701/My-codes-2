@@ -1,23 +1,43 @@
+//Function 
+//  -Change the id of Input Value
+function convert(e)
+{
+    let input_value = input.value;
+    let selectedValue = document.getElementById("temp_type").value;
 
-result_c.innerHTML = "39";
-
-/*
-    1 function, not 3
-    add event listener to textbox (enter key)
+    //toFixed Makes sure there are 2 decimal places in the result
+    //parseFloat Converts the string to a number
+    if (selectedValue === 'celsius') {
+        input_value = parseFloat(input_value);
+        resultCelsius.innerHTML = `${input_value.toFixed(2)} °C`;
+        resultFahrenheit.innerHTML = `${(input_value * 1.8 + 32).toFixed(2)} °F`;
+        resultKelvin.innerHTML = `${(input_value + 273.15).toFixed(2)} K`;
+    }
     
+    if (selectedValue === 'fahrenheit') {
+        input_value = parseFloat(input_value);
+        resultCelsius.innerHTML = `${((input_value - 32) * 5 / 9).toFixed(2)} °C`;
+        resultFahrenheit.innerHTML = `${input_value.toFixed(2)} °F`;
+        resultKelvin.innerHTML = `${((input_value - 32) * 5 / 9 + 273.15).toFixed(2)} K`;
+    }
+    
+    if (selectedValue === 'kelvin') {
+        input_value = parseFloat(input_value); 
+        resultCelsius.innerHTML = `${(input_value - 273.15).toFixed(2)} °C`;
+        resultFahrenheit.innerHTML = `${((input_value - 273.15) * 9 / 5 + 32).toFixed(2)} °F`;
+        resultKelvin.innerHTML = `${input_value.toFixed(2)} K`;
+    }
+}
 
+//Get ELements from HTML by Id
+let resultCelsius = document.getElementById("result_c");
+let resultFahrenheit = document.getElementById("result_f");
+let resultKelvin = document.getElementById("result_k");
+// let C = document.getElementById("celsius");
+// let F = document.getElementById("fahrenheit");
+// let K = document.getElementById("kelvin");
+let btn = document.getElementById("btn");
+let input = document.getElementById("input");
 
-    <select id="myDropdown">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-    </select>
-
-    // JavaScript
-    const dropdown = document.getElementById('myDropdown');
-    dropdown.addEventListener('change', function() {
-        const selectedValue = this.value;
-        console.log(selectedValue); // Outputs the selected value when changed
-    });
-
-*/
+//Add even listener for the function convert
+btn.addEventListener("click", convert);
