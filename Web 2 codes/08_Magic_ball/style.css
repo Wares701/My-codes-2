@@ -1,0 +1,31 @@
+*
+{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body
+{
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+#mainWrapper
+{
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  background-color: #222222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1, p
+{
+  -webkit-user-select: none;  /*Safari*/
+  user-select: none;          /*Everything else*/
+}

@@ -1,0 +1,33 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: #000;
+    color: lime;
+}
+
+div{
+    border: 1px solid lime;
+    height: 50px;
+}
+
+button, p
+{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#bar{
+    background-color: #fff;
+}
+
+#progress{
+    background: red;
+    width: 0%;
+}

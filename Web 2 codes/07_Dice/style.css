@@ -1,0 +1,29 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+body
+{
+  background-color: yellow;
+}
+.dice
+{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  text-align: center;
+  font-size: 30px;
+}
+button
+{
+  padding: 20px;
+  font-size: 30px;
+}
+p
+{
+  font-size: 30px;
+  padding: 10px;
+}

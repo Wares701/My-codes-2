@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
+
 Body{
     background-color: rgba(255, 255, 0, 0.186);
-    font-family: 
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+}
+
+h1{
+    font-family: "Fruktur", system-ui;
+    font-weight: 400;
 }
