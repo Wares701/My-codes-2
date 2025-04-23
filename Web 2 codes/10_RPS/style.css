@@ -4,9 +4,35 @@ Body{
     background-color: rgba(255, 255, 0, 0.186);
     font-family: "Indie Flower", cursive;
     font-weight: 400;
+    text-align: center;
 }
 
 h1{
     font-family: "Fruktur", system-ui;
     font-weight: 400;
+}
+
+.btn{
+    background-color: rgba(255, 255, 0, 0.186);
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 3rem;
+    margin: 2rem 2rem;
+}
+
+abbr{
+    text-decoration: none;
+    border-bottom: 1px dotted black;
+}
+
+h3{
+    font-size: 1.7rem;
 }
