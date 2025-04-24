@@ -25,6 +25,7 @@ button, p
 
 #bar{
     background-color: #fff;
+    margin: 10px 20px;
 }
 
 #progress{
