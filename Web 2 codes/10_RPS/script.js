@@ -27,43 +27,27 @@ function computerFunction(e)
         computerSelect.innerHTML = "Scissors"
     }
 
-    if(userSelect.innerHTML == "Paper" && rand == 2)
-    {
-      outputBox.innerHTML = "Guess it's a tie.";
-    }
-    else if(userSelect.innerHTML == "Rock" && rand == 1)
-    {
-      outputBox.innerHTML = "Guess it's a tie.";
-    }
-    else if(userSelect.innerHTML == "Scissors" && rand == 3)
-    {
-      outputBox.innerHTML = "Guess it's a tie.";
-    }
-   else if(userSelect.innerHTML == "Scissors" && rand == 2)
-    {
-      outputBox.innerHTML = "You win this one... but I'll crush the next one!";
-    }
-    else if(userSelect.innerHTML == "Rock" && rand == 3)
-    {
-      outputBox.innerHTML = "You win this one... but I'll crush the next one!";
-    }
-    else if(userSelect.innerHTML == "Paper" && rand == 1)
-    {
-      outputBox.innerHTML = "You win this one... but I'll crush the next one!";
-    }
-
-    else
-    {
-      outputBox.innerHTML = compWinSentence;
-    }
-
-
-    let count = 0;
-    for (let i = 0; i < yourArray.length; i++) {
-      if (yourArray[i] === compWinSentence) {
-        count++;
-      }
-    }
+    if (userSelect.innerHTML == "Paper" && rand == 2 ||
+      userSelect.innerHTML == "Rock" && rand == 1 ||
+      userSelect.innerHTML == "Scissors" && rand == 3) {
+        outputBox.innerHTML = "Guess it's a tie.";
+  } 
+  else if (userSelect.innerHTML == "Scissors" && rand == 2 ||
+           userSelect.innerHTML == "Rock" && rand == 3 ||
+           userSelect.innerHTML == "Paper" && rand == 1) {
+    outputBox.innerHTML = "You win this one... but I'll crush the next one!";
+  } 
+  else {
+      outputBox.innerHTML = "Boom! Crushed it. Better luck next time human!";
+  }
+ 
+    if (outputBox.innerHTML == "Guess it's a tie.") {
+      bothScored.innerHTML = parseInt(bothScored.innerHTML) + 1;
+  } else if (outputBox.innerHTML == "You win this one... but I'll crush the next one!") {
+      userScore.innerHTML = parseInt(userScore.innerHTML) + 1;
+  } else {
+      computerScore.innerHTML = parseInt(computerScore.innerHTML) + 1;
+  }
 }
 
 function counter(){
