@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>High Low Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+            <h1>Let's Play Hight Low Game</h1>
+            <button id="game_started" class="btn">Press to Start</button>
+        </div>
+        <div id="game" class="hide">
+            <h1>High Low Game</h1>
+            <p>I've got a number. let's see how long it takes you to guess it!</p>
+            <button class="btn" id="send_guess">Send Guess</button>
+            <input type="text" id="guess">
+            <p>Number of times guessed: <span id="count"></span></p>
+            <p id="hint"></p>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
