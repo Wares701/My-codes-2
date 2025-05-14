@@ -20,5 +20,19 @@ function random_range(low, high)
   return Math.floor(Math.random()*size)+low;
 }
 
+function checkGuess(e){
+  let guessValue = Number(Guess.value);
+  if(guessValue < rand){
+    Hint.innerHTML = "Your guess is too low!";
+  }
+  else if(guessValue > rand){
+    Hint.innerHTML = "Your guess is too high!";
+  }
+  else if(guessValue == rand){
+    Hint.innerHTML = "Bingo! You have guessed it";
+  }
+
+}
 
 gameStarted.addEventListener("click", computerGuess);
+sendGuess.addEventListener("click", checkGuess);
