@@ -22,19 +22,39 @@ function random_range(low, high)
 }
 
 function checkGuess(e){
-  count++;
-  guessCount.textContent = count;
+  console.log(sendGuess.innerHTML)
+  if (sendGuess.innerHTML == "Send Guess" )
+  {
 
-  let guessValue = Number(Guess.value);
-  if(guessValue < rand){
-    Hint.innerHTML = "Your guess is too low!";
+    let guessValue = Number(Guess.value);
+    Guess.value = "";
+    Guess.focus()
+    if(guessValue < rand){
+      Hint.innerHTML = `${guessValue} too low!`;
+      count++;
+      guessCount.textContent = count;
+    }
+    else if(guessValue > rand){
+      Hint.innerHTML = `${guessValue} is too high!`;
+      count++;
+      guessCount.textContent = count;
+    }
+    else if(guessValue == rand){
+      Hint.innerHTML = "Bingo! You have guessed it.";
+      sendGuess.innerHTML = "Play Again";
+      
+      
+    }
+
   }
-  else if(guessValue > rand){
-    Hint.innerHTML = "Your guess is too high!";
-  }
-  else if(guessValue == rand){
-    Hint.innerHTML = "Bingo! You have guessed it";
-    let count = 0;
+  else 
+  {
+    count = 0;
+    guessCount.textContent = count;
+    Guess.value = "";
+    sendGuess.innerHTML = "Send Guess";
+    rand = random_range(1,100)
+    console.log(rand)
   }
 }
 
