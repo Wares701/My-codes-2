@@ -1,11 +1,12 @@
-let sendGuess = document.getElementById("send_guess");
+const sendGuess = document.getElementById("send_guess");
 let Guess = document.getElementById("guess");
-let Count = document.getElementById("count");
+const guessCount = document.getElementById("count");
 let Hint = document.getElementById("hint");
 let gameStarted = document.getElementById("game_started");
 let menu = document.getElementById("menu");
 let game = document.getElementById("game");
 let rand = 0;
+let count = 0;
 function computerGuess(e){
     menu.classList.toggle("hide");
     game.classList.toggle("hide");
@@ -21,6 +22,9 @@ function random_range(low, high)
 }
 
 function checkGuess(e){
+  count++;
+  guessCount.textContent = count;
+
   let guessValue = Number(Guess.value);
   if(guessValue < rand){
     Hint.innerHTML = "Your guess is too low!";
@@ -30,9 +34,11 @@ function checkGuess(e){
   }
   else if(guessValue == rand){
     Hint.innerHTML = "Bingo! You have guessed it";
+    let count = 0;
   }
-
 }
+
+  //Always put it to zero outside of the function
 
 gameStarted.addEventListener("click", computerGuess);
 sendGuess.addEventListener("click", checkGuess);

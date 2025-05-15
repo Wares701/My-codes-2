@@ -24,7 +24,7 @@ p {
     margin: 10px 0;
 }
 
-input#guess {
+input#guess, input {
     padding: 10px 15px;
     border: 2px solid #ffb3c6;
     border-radius: 20px;
