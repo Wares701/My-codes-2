@@ -21,7 +21,7 @@ function random_range(low, high)
   return Math.floor(Math.random()*size)+low;
 }
 
-function checkGuess(e){
+function checkGuess(event){
   console.log(sendGuess.innerHTML)
   if (sendGuess.innerHTML == "Send Guess" )
   {
@@ -62,3 +62,8 @@ function checkGuess(e){
 
 gameStarted.addEventListener("click", computerGuess);
 sendGuess.addEventListener("click", checkGuess);
+sendGuess.addEventListener("keypress" checkGuess{
+      if (event.key === "Enter") {
+      event.preventDefault(); // Prevents form submission if input is within a form
+      button.click(); // Triggers the button's click event
+})
