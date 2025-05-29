@@ -1,0 +1,57 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* H1 styled like a marquee box */
+.mainWrapper h1 {
+  border: 2px solid #00ffff;
+  padding: 15px 25px;
+  margin: 30px 0;
+  font-size: 2rem;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px #00ffffaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Input + buttons section */
+.mainWrapper input,
+.mainWrapper button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mainWrapper input {
+  width: 250px;
+  max-width: 90%;
+  background-color: #fff;
+  color: #000;
+}
+
+.mainWrapper button {
+  background-color: #00ffff;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mainWrapper button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+}
