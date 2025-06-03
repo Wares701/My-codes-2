@@ -1,10 +1,26 @@
+
+let msgBox = document.getElementById("msg");
+let encodeBtn = document.querySelector("#encode");
+let outputBox = document.getElementById("output");
+let $shift = document.getElementById("shift")
 //Functions
+
+let $shiftNum = $shift.value;
+function handleChange(input){
+    if ($shiftNum < 0) $shiftNum = 0;
+    if($shiftNum > 25) $shiftNum = 25;
+}
+console.log($shiftNum);
 function encodeMsg(e)
+
 {
+
+
     console.log("Encode Button was clicked");
     let text = msgBox.value;
     text = text.toUpperCase();
     let textEncode = ""
+
     let shift = 13;
     for(let i = 0; i < text.length; i++)
     {
@@ -14,15 +30,16 @@ function encodeMsg(e)
             letter = letter.charCodeAt(0);    //A-->65
             letter -= 65;
             //shift the letter
-            letter += 13;//65-->66
+            letter += shift;//65-->66
             letter %= 26;
-            letter += 65;
+            letter += 65; 
             letter = String.fromCharCode(letter);   //66-->B
         }
         console.log(letter);
         textEncode += letter;
     }
     outputBox.innerHTML = textEncode;
+
 
 }
 //1. add a shift box of some sort - number input, slider, dropdown
@@ -33,9 +50,7 @@ function encodeMsg(e)
 
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 //Grab HTML elements
-let msgBox = document.getElementById("msg");
-let encodeBtn = document.querySelector("#encode");
-let outputBox = document.getElementById("output");
+
 //Add event listeners
 encodeBtn.addEventListener("click", encodeMsg);
 //Add timers (won't need for this project)
