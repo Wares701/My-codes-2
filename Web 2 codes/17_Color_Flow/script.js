@@ -1,83 +1,29 @@
-$timer = setInterval(50);
+let r = 255;
+let g = 0;
+let b = 0;
 
-r = 225;
-g = 0;
-b = 0;
-
-/*
-When the function is triggered
-*/
-function execute(){
-    if(r < 225 && g == 0 && b == 225){
+function execute() {
+    if (r < 255 && g === 0 && b === 255) {
         r += 1;
+    } else if (r === 255 && g === 0 && b > 0) {
+        b -= 1;
+    } else if (r === 255 && g < 255 && b === 0) {
+        g += 1;
+    } else if (r > 0 && g === 255 && b === 0) {
+        r -= 1;
+    } else if (r === 0 && g === 255 && b < 255) {
+        b += 1;
+    } else if (r === 0 && g > 0 && b === 255) {
+        g -= 1;
+    } else {
+        r += 1;
+        g -= 1;
+        b -= 1;
     }
-
-    else if(r == 225 && g == 0 && b > 0){
-        b -=1;
-    }
+    console.log(r);
+    console.log(g);
+    console.log(b);
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
-/*
-otherwise if r is 255 and g is 0 and b is greater than 0
-*/
-
-/*
-decrease b
-*/
-
-/*
-otherwise if r is 255 and g is less than 255 and blue is 0
-*/
-
-/*
-increase g
-*/
-
-/*
-otherwise if r is greater than 0 and g is 255 and b is 0
-*/
-
-/*
-decrease r
-*/
-
-/*
-otherwise if r is 0 and g is 255 and b is less than 255
-*/
-
-/*
-increase b
-*/
-
-/*
-otherwise if r is 0 and g is greater than 0 and b is 255
-*/
-
-/*
-decrease g
-*/
-
-/*
-otherwise
-*/
-
-/*
-increase r
-*/
-
-/*
-decrease g
-*/
-
-/*
-decrease b
-*/
-
-/*
-Change the background color to the new RGB values.
-*/
-
-/*
-document.body.style.backgroundColor = "rgb("+r+", "+g +", "+b+")";  
-*/
-
+let timer = setInterval(execute, 50);
