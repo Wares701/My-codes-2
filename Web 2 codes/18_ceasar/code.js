@@ -2,26 +2,30 @@
 let msgBox = document.getElementById("msg");
 let encodeBtn = document.querySelector("#encode");
 let outputBox = document.getElementById("output");
-let $shift = document.getElementById("shift")
+let $shift = document.getElementById("shift");
+let decodeBtn = document.getElementById("decode");
 //Functions
 
-let $shiftNum = $shift.value;
-function handleChange(input){
-    if ($shiftNum < 0) $shiftNum = 0;
-    if($shiftNum > 25) $shiftNum = 25;
+function getValidShift() {
+    let value = parseInt($shift.value);
+    if (isNaN(value)) return 0;
+    if (value < 0) value = 0;
+    if (value > 25) value = 25;
+    console.log(value);
+    return value;
+
 }
-console.log($shiftNum);
+
+
 function encodeMsg(e)
 
 {
-
-
     console.log("Encode Button was clicked");
     let text = msgBox.value;
     text = text.toUpperCase();
     let textEncode = ""
 
-    let shift = 13;
+    let shift = getValidShift();
     for(let i = 0; i < text.length; i++)
     {
         let letter = text.charAt(i);    //grab A
@@ -42,8 +46,16 @@ function encodeMsg(e)
 
 
 }
-//1. add a shift box of some sort - number input, slider, dropdown
-//2. update encode code to make sure it works with the shift
+
+function decodeMsg() {
+    let originalShift = getValidShift();    // 2) Compute the “reverse” shift
+    let reverseShift = (26 - originalShift) % 26;
+    msgBox.value = outputBox.innerHTML;
+    $shift.value = reverseShift;
+    encodeMsg();
+    $shift.value = originalShift;
+}
+
 //3. Add a decode button to the HTML and a decodeMsg to you JS. 
 //      Get your decodeMsg to work by rotating backwords
 //4. Update the CSS to make the application look nice. Be creative.
@@ -53,4 +65,5 @@ let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 //Add event listeners
 encodeBtn.addEventListener("click", encodeMsg);
+decodeBtn.addEventListener("click", decodeMsg);
 //Add timers (won't need for this project)

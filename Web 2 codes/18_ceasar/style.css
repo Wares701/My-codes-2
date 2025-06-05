@@ -1,0 +1,131 @@
+/* style.css */
+
+/* Import a smooth, modern font and apply it to the entire page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, #f0f4fd, #d9e2f7);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+#msg {
+    width: 100%;
+    max-width: 420px;
+    height: 140px;
+    padding: 12px 16px;
+    border: 2px solid #ccd6ec;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2b3a67;
+    resize: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#msg:focus {
+    outline: none;
+    border-color: #6c8df5;
+    box-shadow: 0 0 0 3px rgba(108, 141, 245, 0.25);
+}
+
+
+#shift {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 16px;
+    padding: 10px 14px;
+    border: 2px solid #ccd6ec;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2b3a67;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#shift:focus {
+    outline: none;
+    border-color: #6c8df5;
+    box-shadow: 0 0 0 3px rgba(108, 141, 245, 0.25);
+}
+
+
+#encode,
+#decode {
+    margin-top: 20px;
+    width: 45%;
+    padding: 12px 0;
+    background-color: #6c8df5;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+#encode:hover,
+#decode:hover {
+    background-color: #587ddb;
+    box-shadow: 0 4px 12px rgba(44, 64, 114, 0.15);
+    transform: translateY(-2px);
+}
+
+#encode:active,
+#decode:active {
+    background-color: #4a6ac3;
+    transform: translateY(0);
+}
+
+
+#decode {
+    margin-left: 10px;
+}
+
+#output {
+    margin-top: 24px;
+    padding: 16px;
+    width: 100%;
+    max-width: 420px;
+    min-height: 60px;
+    background: #f5f8fe;
+    border: 2px solid #d1daf2;
+    border-radius: 8px;
+    color: #2b3a67;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#output::before {
+    content: '🔒 ';
+}
+
+#output:not(:empty) {
+    background: #ebf1ff;
+    border-color: #b8c8df;
+}
+
+@media (max-width: 480px) {
+    #encode,
+    #decode {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-top: 12px;
+    }
+}
